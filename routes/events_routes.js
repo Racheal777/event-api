@@ -11,3 +11,4 @@ eventRouter.post('/', postEvents)
 eventRouter.get('/:id', getOneEvent)
 
 eventRouter.delete('/:id', deleteEvent)
+

@@ -2,6 +2,7 @@
 import { eventRouter } from "./routes/events_routes.js"
 import mongoose from "mongoose"
 import 'dotenv/config'
+import { userRouter } from "./routes/user_routes.js"
 
 
  const app = express()
@@ -17,6 +18,7 @@ const mongoURI = process.env.MONGO_URI
 app.use(express.json())
 
  
+app.use('/api/v1/users', userRouter)
 app.use('/api/v1/events',eventRouter)
 
 
